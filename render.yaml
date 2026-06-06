@@ -1,0 +1,41 @@
+databases:
+  - name: sessions-db
+    databaseName: postgres
+    user: postgres
+    plan: free
+
+services:
+  - type: web
+    name: sessions-backend
+    env: python
+    plan: free
+    rootDir: backend
+    buildCommand: "pip install -r requirements.txt && python manage.py migrate --noinput && python manage.py collectstatic --noinput"
+    startCommand: "gunicorn config.wsgi:application --bind 0.0.0.0:$$PORT"
+    envVars:
+      - key: DB_NAME
+        fromDatabase:
+          name: sessions-db
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: sessions-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: sessions-db
+          property: password
+      - key: DB_HOST
+        fromDatabase:
+          name: sessions-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: sessions-db
+          property: port
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DJANGO_DEBUG
+        value: "False"
+      - key: ALLOWED_HOSTS
+        value: "*"

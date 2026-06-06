@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-// Handles both client-side proxy routing (relative path) and server-side docker container routing (http://backend:8000)
+// Handles Vercel deployment variable, browser relative path, and server-side docker routing
 export const api = axios.create({
-  baseURL: typeof window !== 'undefined' ? '' : 'http://backend:8000',
+  baseURL: process.env.NEXT_PUBLIC_API_URL || (typeof window !== 'undefined' ? '' : 'http://backend:8000'),
   headers: {
     'Content-Type': 'application/json',
   },
