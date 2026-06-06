@@ -1,23 +1,19 @@
 # AI Prompts Development Log - Sessions Marketplace
 
-This file contains the chronological logs of user requests sent to the AI coding assistants during the development of this project.
+---
 
-## Conversation ID: `1c886a5f-6461-4a77-8a7b-19f602ff8054`
-
-### Prompt #1 - 2026-06-06T03:39:19Z
-```text
+### Prompt #1
+```
 go through the project and get the complete understanding of it
 ```
 
-### Prompt #2 - 2026-06-06T03:43:25Z
-```text
-can you run the test script to check and verifythe tests
+### Prompt #2
+```
+can you run the test script to check and verify the tests
 ```
 
-## Conversation ID: `129615b2-f9f9-4f21-b670-a4f8ea58c7cc`
-
-### Prompt #3 - 2026-06-06T03:58:43Z
-```text
+### Prompt #3
+```
 Create a full-stack project structure for:
 
 Frontend:
@@ -67,33 +63,14 @@ Requirements:
 Generate complete code.
 ```
 
-### Prompt #4 - 2026-06-06T04:39:56Z
-```text
-how much time will it take for the docker to finish
+### Prompt #4
+```
+while this docker thing get completed do we build the next stage?
+just check tell me do not code anything
 ```
 
-### Prompt #5 - 2026-06-06T04:43:01Z
-```text
-while this docker thing get completed do we build the nexrt stage?
+### Prompt #5
 ```
-
-### Prompt #6 - 2026-06-06T04:44:52Z
-```text
-while this docker thing get completed do we build the nexrt stage? just check tell me do not code anything
-```
-
-### Prompt #7 - 2026-06-06T04:45:59Z
-```text
-can you show mw the terminal the docker command is running in
-```
-
-### Prompt #8 - 2026-06-06T04:47:02Z
-```text
-do it take the same time next time running the docker command?
-```
-
-### Prompt #9 - 2026-06-06T04:48:43Z
-```text
 Implement database models for a Sessions Marketplace.
 
 Use Django ORM.
@@ -135,8 +112,8 @@ Return sample data.
 Generate complete code.
 ```
 
-### Prompt #10 - 2026-06-06T04:57:21Z
-```text
+### Prompt #6
+```
 Test Cases
 Get all sessions
 GET /api/sessions
@@ -144,26 +121,27 @@ GET /api/sessions
 Expected:
 
 [
- {
-   "id":1,
-   "title":"Yoga Session"
- }
+  {
+    "id":1,
+    "title":"Yoga Session"
+  }
 ]
+
 Session detail
 GET /api/sessions/1
 
 Expected:
 
 {
- "id":1,
- "title":"Yoga Session"
+  "id":1,
+  "title":"Yoga Session"
 }
 
 this test cases working fine?
 ```
 
-### Prompt #11 - 2026-06-06T04:59:00Z
-```text
+### Prompt #7
+```
 Implement JWT authentication.
 
 Requirements:
@@ -191,37 +169,8 @@ which returns authenticated user.
 Generate serializers, views, urls, permissions.
 ```
 
-### Prompt #12 - 2026-06-06T05:00:19Z
-```text
-Implement JWT authentication.
-
-Requirements:
-
-Use:
-- djangorestframework-simplejwt
-
-Endpoints:
-
-POST /auth/register
-POST /auth/login
-POST /auth/refresh
-
-Return:
-- access token
-- refresh token
-
-Protect private routes.
-
-Create:
-GET /profile
-
-which returns authenticated user.
-
-Generate serializers, views, urls, permissions.
+### Prompt #8
 ```
-
-### Prompt #13 - 2026-06-06T05:13:46Z
-```text
 Test Cases
 Register
 POST /auth/register
@@ -229,9 +178,10 @@ POST /auth/register
 Expected:
 
 {
- "access":"...",
- "refresh":"..."
+  "access":"...",
+  "refresh":"..."
 }
+
 Profile
 GET /profile
 Authorization: Bearer token
@@ -239,14 +189,14 @@ Authorization: Bearer token
 Expected:
 
 {
- "email":"..."
+  "email":"..."
 }
 
 these test cases passed? like not the exact output but a proper output for these
 ```
 
-### Prompt #14 - 2026-06-06T05:14:09Z
-```text
+### Prompt #9
+```
 Implement Google OAuth login.
 
 Backend:
@@ -267,16 +217,16 @@ POST /auth/google
 
 Response:
 {
- access,
- refresh,
- user
+  access,
+  refresh,
+  user
 }
 
 Generate backend and frontend integration.
 ```
 
-### Prompt #15 - 2026-06-06T05:39:55Z
-```text
+### Prompt #10
+```
 Test Cases
 Login
 
@@ -297,8 +247,8 @@ works.
 this passes?
 ```
 
-### Prompt #16 - 2026-06-06T05:41:28Z
-```text
+### Prompt #11
+```
 Implement role-based authorization.
 
 Roles:
@@ -321,8 +271,8 @@ Create custom DRF permissions.
 Protect endpoints accordingly.
 ```
 
-### Prompt #17 - 2026-06-06T06:08:20Z
-```text
+### Prompt #12
+```
 Test Cases
 
 USER:
@@ -340,40 +290,26 @@ POST /sessions
 Expected:
 
 201 Created
-??
+
+are these passing?
 ```
 
-### Prompt #18 - 2026-06-06T06:55:19Z
-```text
-Continue
+### Prompt #13
 ```
-
-### Prompt #19 - 2026-06-06T07:07:34Z
-```text
 Test Cases
-POST /sessions
-
-Creates session.
-
-PUT /sessions/1
-
-Updates.
-
-DELETE /sessions/1
-
-Deletes.
+POST /sessions - Creates session.
+PUT /sessions/1 - Updates.
+DELETE /sessions/1 - Deletes.
 ```
 
-### Prompt #20 - 2026-06-06T07:08:49Z
-```text
+### Prompt #14
+```
 Implement booking system.
 
 Endpoints:
 
 POST /bookings
-
 GET /bookings/my
-
 GET /creator/bookings
 
 Rules:
@@ -386,8 +322,8 @@ Rules:
 Generate tests.
 ```
 
-### Prompt #21 - 2026-06-06T07:18:43Z
-```text
+### Prompt #15
+```
 Test Cases
 
 Book session:
@@ -397,7 +333,7 @@ POST /bookings
 Expected:
 
 {
- "success":true
+  "success":true
 }
 
 Duplicate booking:
@@ -408,68 +344,18 @@ Already booked
 verify them
 ```
 
-### Prompt #22 - 2026-06-06T07:22:27Z
-```text
-there are errors in the@[/Users/anuragdeshmukh/Desktop/untitled folder 4/backend/marketplace/serializers.py] @[/Users/anuragdeshmukh/Desktop/untitled folder 4/backend/marketplace/tests.py] @[/Users/anuragdeshmukh/Desktop/untitled folder 4/backend/marketplace/views.py]
+### Prompt #16
+```
+there are errors in serializers.py, tests.py, views.py
 ```
 
-### Prompt #23 - 2026-06-06T08:39:52Z
-```text
-You are preparing a professional AI-assisted software development report for submission.
-
-Project:
-Sessions Marketplace Application
-
-Tech Stack:
-
-* Next.js
-* Django REST Framework
-* PostgreSQL
-* Docker
-* Nginx
-* Google OAuth
-* JWT Authentication
-
-The project was developed using AI-assisted coding tools.
-
-Generate a professional AI_DEVELOPMENT_LOG.md containing:
-
-1. Project Overview
-2. Development Methodology
-3. Stage-wise Development Summary
-
-   * Docker Setup
-   * Database Models
-   * JWT Authentication
-   * Google OAuth
-   * Role-Based Authorization
-   * Session CRUD
-   * Booking System
-   * Frontend Development
-   * Dashboards
-   * Deployment Setup
-4. Challenges Encountered
-5. AI-Assisted Iterations
-6. Testing & Validation
-7. Final Outcome
-
-Write it as a polished engineering document suitable for internship assignment submission.
+### Prompt #17
+```
+go through the project and get the complete understanding of the project
 ```
 
-### Prompt #24 - 2026-06-06T08:43:02Z
-```text
-get the prompt logs for this project
+### Prompt #18
 ```
-
-## Conversation ID: `7b1f0f03-fe03-4f34-8980-c3829beb0242`
-
-### Prompt #25 - 2026-06-06T07:25:47Z
-```text
-go throigh the project and get the complete understanding of the project
-```
-
-### Prompt #26 - 2026-06-06T07:31:17Z
-```text
 Build responsive frontend using Next.js.
 
 Pages:
@@ -497,48 +383,48 @@ Protected routes
 Use React Query.
 ```
 
-### Prompt #27 - 2026-06-06T07:35:11Z
-```text
-@[current_problems]
+### Prompt #19
 ```
-
-### Prompt #28 - 2026-06-06T07:35:56Z
-```text
 run the frontend so that I can verify and also give the test checklist
 ```
 
-### Prompt #29 - 2026-06-06T07:37:13Z
-```text
+### Prompt #20
+```
 Error loading sessions
 
 Make sure the Django database container and services are fully operational.
 ```
 
-### Prompt #30 - 2026-06-06T07:40:09Z
-```text
-the my profile is broken it it displating 
-Django REST framework
-Profile
+### Prompt #21
+```
+the my profile is broken, it's showing
 
-GET 
-json
-api
-Profile
-GET /profile
 HTTP 401 Unauthorized
-Allow: GET, HEAD, OPTIONS
-Content-Type: application/json
-Vary: Accept
-WWW-Authenticate: Bearer realm="api"
-
 {
     "detail": "Authentication credentials were not provided."
 }
-this
 ```
 
-### Prompt #31 - 2026-06-06T07:41:24Z
-```text
+### Prompt #22
+```
+the session detail page is returning 404
+http://localhost/session/9
+
+and is the book session accessible without login? the google oauth button is not showing
+```
+
+### Prompt #23
+```
+404 still on the session id page
+```
+
+### Prompt #24
+```
+what about the other sessions?
+```
+
+### Prompt #25
+```
 Implement dashboards.
 
 User Dashboard:
@@ -554,30 +440,8 @@ Creator Dashboard:
 Use cards and tables.
 ```
 
-### Prompt #32 - 2026-06-06T07:46:57Z
-```text
-the my profile link is broken the 
-404
-This page could not be found.
-for the 
-http://localhost/session/9
-and is the book session link accessible without login the google oauth is not present
+### Prompt #26
 ```
-
-### Prompt #33 - 2026-06-06T07:54:28Z
-```text
-404
-This page could not be found.
-the session id page
-```
-
-### Prompt #34 - 2026-06-06T07:58:52Z
-```text
-what about the other sessions?
-```
-
-### Prompt #35 - 2026-06-06T08:00:12Z
-```text
 Prepare production-ready docker setup.
 
 Requirements:
@@ -593,8 +457,8 @@ Requirements:
 Generate final setup.
 ```
 
-### Prompt #36 - 2026-06-06T08:04:13Z
-```text
+### Prompt #27
+```
 Create README.md containing:
 
 1. Architecture diagram
@@ -608,34 +472,36 @@ Create README.md containing:
 Create .env.example
 ```
 
-### Prompt #37 - 2026-06-06T08:05:07Z
-```text
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/anurag5764/sessions.git
-git push -u origin main
+### Prompt #28
+```
+https://github.com/anurag5764/sessions
 
-
+with proper gitignore
 push to github
 ```
 
-### Prompt #38 - 2026-06-06T08:05:55Z
-```text
-https://github.com/anurag5764/sessions.
-
-with propere gitignore 
-push to github
+### Prompt #29
+```
+lets deploy this with vercel and render
 ```
 
-### Prompt #39 - 2026-06-06T08:09:05Z
-```text
-can we deploy this
+### Prompt #30
+```
+render.yaml has an issue
+
+databases[0].databaseName - reserved DB name
+databases[0].user - not a valid DB user name
+
+databases:
+  - name: sessions-db
+    databaseName: postgres
+    user: postgres
+
+fix the render.yaml
 ```
 
-### Prompt #40 - 2026-06-06T08:09:54Z
-```text
+### Prompt #31
+```
 ✅ docker compose up --build works
 ✅ Google OAuth works
 ✅ JWT works
@@ -648,9 +514,5 @@ can we deploy this
 ✅ README complete
 ✅ .env.example added
 
-this checklist checked
+this checklist checked and what is the google auth dev override?
 ```
-
-
-
-
